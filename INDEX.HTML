@@ -1,0 +1,571 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#071525">
+<meta name="description" content="SZ Enterprises provides CCTV installation, surveillance systems, remote viewing, accessories and security support across Dakshina Kannada, Udupi and Karnataka.">
+<title>SZ Enterprises | Premium CCTV & Security Solutions</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#071525;
+  --bg2:#0b2035;
+  --panel:#102b43;
+  --yellow:#ffb51b;
+  --white:#fff;
+  --muted:#a7b7c8;
+  --line:rgba(255,255,255,.12);
+  --radius:22px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:100px}
+body{font-family:"DM Sans",sans-serif;background:#f6f8fb;color:#142337;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit}
+button,a{-webkit-tap-highlight-color:transparent}
+img{display:block;width:100%;object-fit:cover}
+.container{width:min(1200px,calc(100% - 40px));margin:auto}
+section{position:relative}
+.gold{color:var(--yellow)}
+.eyebrow{display:flex;align-items:center;gap:10px;text-transform:uppercase;letter-spacing:2px;font-size:11px;font-weight:800}
+.eyebrow:before{content:"";width:28px;height:3px;background:var(--yellow)}
+h1,h2,h3{font-family:Manrope,sans-serif}
+h2{font-size:clamp(32px,4.5vw,54px);line-height:1.08;letter-spacing:-1.8px}
+.section-heading{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:35px}
+.section-heading p{max-width:430px;color:#667487;font-size:14px;line-height:1.8}
+.section-heading h2{margin-top:12px}
+.btn{display:inline-flex;justify-content:center;align-items:center;gap:10px;padding:15px 21px;border-radius:12px;font-weight:800;font-size:13px;border:1px solid transparent;transition:.25s;cursor:pointer}
+.btn:hover{transform:translateY(-3px);box-shadow:0 12px 28px #0002}
+.btn-gold{background:var(--yellow);color:#091a2a}
+.btn-dark{border-color:rgba(255,255,255,.28);color:white;background:rgba(255,255,255,.04)}
+.btn-dark:hover{background:rgba(255,255,255,.1)}
+.btn-light{background:white;color:var(--bg)}
+.topline{background:#030d17;color:#dce6ef;font-size:11px;padding:10px 0}
+.topline .container{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+.topline a:hover{color:var(--yellow)}
+header{position:sticky;top:0;z-index:50;background:rgba(7,21,37,.94);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+.navbar{min-height:83px;display:flex;align-items:center;justify-content:space-between;gap:22px}
+.logo{display:flex;align-items:center;gap:10px;color:white;flex-shrink:0}
+.logo-mark{width:48px;height:43px;position:relative;display:grid;place-items:center;font:900 27px Manrope,sans-serif;letter-spacing:-4px}
+.logo-mark:before{content:"";position:absolute;inset:0;border-top:5px solid var(--yellow);border-left:5px solid white;transform:skewY(-25deg) rotate(-2deg);border-radius:3px}
+.logo-mark span{position:relative;margin-top:7px}
+.logo-name{font:800 18px Manrope,sans-serif;line-height:1.1}
+.logo-name small{display:block;font:italic 10px "DM Sans",sans-serif;color:var(--yellow);letter-spacing:.4px;margin-top:4px}
+.navlinks{display:flex;align-items:center;gap:23px;color:#dbe5ee;font-size:12px;font-weight:700}
+.navlinks a{transition:.2s}
+.navlinks a:hover{color:var(--yellow)}
+.nav-cta{white-space:nowrap}
+.menu-btn{display:none;background:none;color:white;border:1px solid var(--line);border-radius:9px;padding:9px 12px;font-size:22px}
+
+/* HERO */
+.hero{background:var(--bg);color:white;min-height:650px;display:flex;align-items:center;overflow:hidden;isolation:isolate}
+.hero-photo{position:absolute;inset:0 0 0 28%;z-index:-3;background:url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2000&q=90") center/cover;opacity:.82}
+.hero:before{content:"";position:absolute;inset:0;z-index:-2;background:linear-gradient(90deg,#071525 0%,#071525 29%,rgba(7,21,37,.88) 45%,rgba(7,21,37,.18) 100%)}
+.hero:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,#071525 0%,transparent 35%,rgba(7,21,37,.1) 100%)}
+.hero-content{padding-top:75px;padding-bottom:90px;max-width:690px;position:relative;z-index:3}
+.hero h1{font-size:clamp(47px,7vw,86px);font-weight:800;line-height:.99;letter-spacing:-4px;margin:24px 0}
+.hero h1 span{display:block;color:var(--yellow)}
+.hero-lead{font-size:17px;color:#d5e0ea;max-width:550px;line-height:1.8}
+.hero-actions{display:flex;flex-wrap:wrap;gap:13px;margin-top:29px}
+.hero-facts{display:flex;flex-wrap:wrap;gap:22px;margin-top:34px}
+.hero-fact{display:flex;align-items:center;gap:9px;color:#dbe5ee;font-size:11px;line-height:1.4}
+.fact-icon{width:36px;height:36px;border:1px solid var(--yellow);border-radius:50%;display:grid;place-items:center;color:var(--yellow);font-size:17px}
+.hero-tag{position:absolute;right:7%;bottom:60px;z-index:2;transform:rotate(-8deg);border-left:3px solid var(--yellow);padding:8px 15px;color:white;font:800 12px Manrope,sans-serif;letter-spacing:2px;text-shadow:0 2px 15px #000}
+.hero-tag span{display:block;color:var(--yellow);font-size:17px}
+.hero-orbit{position:absolute;right:7%;top:14%;width:min(36vw,440px);aspect-ratio:1;z-index:1;pointer-events:none;perspective:900px}
+.orbit-ring{position:absolute;inset:7%;border:1px solid rgba(255,181,27,.55);border-radius:50%;transform:rotateX(68deg) rotateZ(-25deg);animation:orbit 16s linear infinite}
+.orbit-ring:nth-child(2){inset:17%;border-color:rgba(255,255,255,.4);transform:rotateX(68deg) rotateZ(25deg);animation-duration:22s;animation-direction:reverse}
+.orbit-ring:nth-child(3){inset:26%;border-color:rgba(255,181,27,.28);transform:rotateY(65deg);animation-duration:18s}
+.orbit-dot{position:absolute;top:12%;left:49%;width:13px;height:13px;background:var(--yellow);border-radius:50%;box-shadow:0 0 30px var(--yellow)}
+.camera-3d{position:absolute;inset:27% 10%;display:grid;place-items:center;transform-style:preserve-3d;animation:float 5s ease-in-out infinite}
+.camera-body{width:250px;height:115px;border-radius:30px 40px 40px 30px;background:linear-gradient(145deg,#fff,#aebdca 42%,#eef2f6 55%,#697b8a);box-shadow:inset -12px -12px 24px #42536555,0 35px 65px #0008;transform:rotateY(-20deg) rotateX(8deg);position:relative;border:1px solid #fff}
+.camera-body:before{content:"";position:absolute;width:94px;height:94px;left:-32px;top:10px;border-radius:50%;background:radial-gradient(circle at 48% 45%,#02070c 0 13%,#122d46 14% 23%,#000 24% 36%,#273f51 37% 43%,#111b27 44% 58%,#dce4e9 59% 67%,#788a9a 68%);box-shadow:0 8px 20px #0007;border:5px solid #e9eef3}
+.camera-body:after{content:"SZ";position:absolute;right:23px;top:38px;font:bold 20px Manrope,sans-serif;color:#1b2a38;transform:rotateY(10deg)}
+.camera-base{position:absolute;width:115px;height:20px;right:-30px;top:-17px;border-radius:12px;background:linear-gradient(white,#8293a1);transform:rotate(-20deg);box-shadow:0 6px 15px #0006}
+.camera-light{position:absolute;width:22px;height:22px;left:2px;top:45px;border-radius:50%;background:#70dfff;box-shadow:0 0 22px #49dfff;opacity:.8;animation:pulse 2s infinite}
+.hero-bottom{position:absolute;bottom:0;left:0;right:0;height:5px;background:linear-gradient(90deg,var(--yellow),transparent 80%)}
+
+/* TRUST / SERVICES */
+.trustbar{background:#fff;padding:24px 0;border-bottom:1px solid #e6ebf1}
+.trust-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+.trust-item{display:flex;align-items:center;justify-content:center;gap:12px;border-right:1px solid #e3e8ee;padding:8px}
+.trust-item:last-child{border:0}
+.trust-icon{width:43px;height:43px;border-radius:13px;background:#fff3d6;color:#9c6500;display:grid;place-items:center;font-size:21px}
+.trust-item b{display:block;font:800 13px Manrope,sans-serif}
+.trust-item small{display:block;color:#758194;font-size:10px;margin-top:3px}
+.services{padding:90px 0;background:#f7f9fc}
+.service-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:17px}
+.service-card{background:#fff;border:1px solid #e4e9ef;border-radius:19px;overflow:hidden;transition:transform .3s,box-shadow .3s;position:relative}
+.service-card:hover{transform:translateY(-9px) rotateX(2deg);box-shadow:0 22px 45px #14233716}
+.service-img{height:180px;overflow:hidden;position:relative;background:#dce5ec}
+.service-img img{height:100%;transition:transform .6s}
+.service-card:hover .service-img img{transform:scale(1.08)}
+.service-number{position:absolute;top:13px;left:13px;background:var(--yellow);color:#071525;border-radius:8px;padding:6px 9px;font:800 11px Manrope}
+.service-body{padding:22px}
+.service-body h3{font-size:17px;margin-bottom:9px}
+.service-body p{font-size:12px;line-height:1.8;color:#718093;min-height:66px}
+.service-body a{display:inline-flex;margin-top:17px;color:#a36c00;font-size:11px;font-weight:800}
+.service-body a:hover{text-decoration:underline}
+
+/* BRANDS */
+.brands{background:#fff;padding:38px 0;border-bottom:1px solid #e8edf2}
+.brand-heading{text-align:center;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#8290a0;font-weight:800;margin-bottom:22px}
+.brand-row{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:14px}
+.brand-pill{padding:13px 22px;border:1px solid #e5eaf0;border-radius:12px;background:#fbfcfd;font:800 15px Manrope,sans-serif;color:#344154;transition:.25s}
+.brand-pill:hover{border-color:var(--yellow);transform:translateY(-3px)}
+.brand-pill.cp{color:#e22e30}
+.brand-note{text-align:center;font-size:10px;color:#8b96a4;margin-top:15px}
+
+/* REMOTE / INDUSTRIES */
+.remote{background:var(--bg);color:white;padding:85px 0;overflow:hidden}
+.remote-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.remote-visual{position:relative;min-height:380px;border-radius:24px;overflow:hidden;background:#102d48;transform-style:preserve-3d;box-shadow:0 25px 70px #0005}
+.remote-visual img{position:absolute;inset:0;height:100%;filter:brightness(.7)}
+.monitor-overlay{position:absolute;left:8%;right:8%;top:12%;bottom:15%;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:7px;transform:rotateY(-7deg) rotateX(3deg);border:7px solid #1d2b38;border-radius:12px;background:#071525;box-shadow:0 20px 35px #0008}
+.monitor-overlay div{background-size:cover;background-position:center;position:relative}
+.monitor-overlay div:after{content:"LIVE";position:absolute;left:8px;top:7px;color:white;background:#c82333;font-size:8px;padding:3px 5px;border-radius:3px}
+.monitor-label{position:absolute;bottom:15px;left:20px;background:var(--yellow);color:#071525;padding:10px 14px;border-radius:9px;font-size:11px;font-weight:900}
+.remote-copy h2{margin:15px 0 20px}
+.remote-copy p{color:#b9c8d6;font-size:14px;line-height:1.9}
+.checks{list-style:none;margin:22px 0 28px}
+.checks li{margin:12px 0;color:#e6edf4;font-size:13px}
+.checks li:before{content:"✓";display:inline-grid;place-items:center;background:var(--yellow);color:#071525;width:21px;height:21px;border-radius:50%;font-weight:900;margin-right:10px}
+.industries{padding:88px 0;background:#fff}
+.industry-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.industry-card{height:230px;border-radius:16px;overflow:hidden;position:relative;background:#071525;color:white;isolation:isolate}
+.industry-card img{position:absolute;inset:0;height:100%;z-index:-2;transition:transform .5s}
+.industry-card:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,rgba(3,14,25,.94),transparent 80%)}
+.industry-card:hover img{transform:scale(1.08)}
+.industry-card span{position:absolute;left:15px;right:12px;bottom:15px;font:800 13px Manrope}
+.industry-card b{display:block;color:var(--yellow);font-size:11px;margin-top:5px}
+
+/* PROJECT GALLERY */
+.projects{padding:88px 0;background:#f2f5f8}
+.project-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+.project-card{position:relative;border:0;border-radius:16px;overflow:hidden;min-height:230px;background:#0a2035;cursor:zoom-in;text-align:left}
+.project-card img{position:absolute;inset:0;height:100%;transition:transform .5s}
+.project-card:after{content:"";position:absolute;inset:35% 0 0;background:linear-gradient(transparent,rgba(4,16,28,.9))}
+.project-card:hover img{transform:scale(1.06)}
+.project-card span{position:absolute;z-index:2;left:15px;right:12px;bottom:14px;color:white;font-size:12px;font-weight:800}
+.project-card span small{display:block;color:var(--yellow);font-size:9px;text-transform:uppercase;letter-spacing:1px;margin-bottom:5px}
+.gallery-disclaimer{font-size:10px;color:#7a8797;margin-top:15px;line-height:1.7}
+.lightbox{display:none;position:fixed;inset:0;z-index:200;background:#000e;align-items:center;justify-content:center;padding:20px}
+.lightbox.open{display:flex}
+.lightbox img{width:auto;max-width:92vw;max-height:85vh;object-fit:contain;border-radius:12px}
+.lightbox button{position:absolute;top:20px;right:25px;border:0;border-radius:50%;background:var(--yellow);width:44px;height:44px;font-size:26px;cursor:pointer}
+
+/* WARRANTY / ABOUT / CONTACT */
+.warranty{background:var(--yellow);padding:32px 0}
+.warranty-inner{display:flex;align-items:center;gap:20px}
+.warranty-icon{width:58px;height:58px;flex-shrink:0;border:2px solid #071525;border-radius:50%;display:grid;place-items:center;font-size:28px;font-weight:900}
+.warranty h2{font-size:27px;letter-spacing:-.7px}
+.warranty p{font-size:12px;margin-top:5px;max-width:690px;line-height:1.7}
+.warranty .btn{margin-left:auto;white-space:nowrap}
+.about{padding:85px 0;background:#fff}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px}
+.about h2{margin-top:15px}
+.about p{font-size:14px;color:#68778a;line-height:1.9;margin-bottom:16px}
+.about-stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:28px}
+.about-stat{border-left:3px solid var(--yellow);padding:10px 12px;background:#f7f9fc}
+.about-stat b{display:block;font:800 13px Manrope}
+.about-stat small{font-size:10px;color:#718093}
+.contact{padding:85px 0;background:var(--bg);color:white}
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:start}
+.contact h2{margin:16px 0}
+.contact-copy>p{color:#b6c6d5;font-size:14px;line-height:1.9}
+.contact-info{margin-top:30px;display:grid;gap:17px}
+.contact-info a,.contact-info div{display:flex;align-items:center;gap:13px;font-size:13px}
+.contact-info i{font-style:normal;width:42px;height:42px;border-radius:12px;background:#14304a;color:var(--yellow);display:grid;place-items:center;font-size:19px}
+.contact-info small{display:block;color:#91a5b8;font-size:10px;margin-bottom:3px}
+.quote-form{background:white;color:#142337;padding:29px;border-radius:22px;box-shadow:0 25px 60px #0003}
+.quote-form h3{font-size:24px}
+.quote-form>p{font-size:12px;color:#718093;margin:5px 0 20px}
+.quote-form label{display:block;font-size:11px;font-weight:800;margin:13px 0 6px}
+.quote-form input,.quote-form select,.quote-form textarea{width:100%;padding:12px 13px;border:1px solid #dce3eb;border-radius:9px;background:#fafbfd;color:#142337;font-size:13px;outline:none}
+.quote-form input:focus,.quote-form select:focus,.quote-form textarea:focus{border-color:#e4a00b;box-shadow:0 0 0 3px #ffb51b25}
+.quote-form textarea{resize:vertical}
+.quote-form button{width:100%;border:0;margin-top:18px}
+.form-note{display:block;font-size:10px;color:#7c8795;text-align:center;margin-top:12px;line-height:1.6}
+footer{background:#030d17;color:#a9b8c7;padding:35px 0 18px}
+.footer-main{display:flex;align-items:center;justify-content:space-between;gap:25px;padding-bottom:25px}
+.footer-main p{font-size:12px;line-height:1.8}
+.footer-links{display:flex;gap:18px;flex-wrap:wrap;font-size:11px}
+.footer-links a:hover{color:var(--yellow)}
+.footer-bottom{border-top:1px solid #1d2b3b;padding-top:16px;display:flex;justify-content:space-between;gap:15px;font-size:10px}
+.footer-disclaimer{font-size:10px;color:#718294;line-height:1.7;margin-top:12px}
+.float-wa{position:fixed;right:19px;bottom:18px;z-index:80;width:57px;height:57px;border-radius:50%;display:grid;place-items:center;background:#20c96b;color:white;font-size:25px;box-shadow:0 10px 28px #0004;border:3px solid white;transition:.2s}
+.float-wa:hover{transform:scale(1.08)}
+.reveal{opacity:0;transform:translateY(25px);transition:opacity .7s ease,transform .7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+@keyframes orbit{to{transform:rotateX(68deg) rotateZ(335deg)}}
+@keyframes float{0%,100%{transform:translateY(0) rotateZ(-2deg)}50%{transform:translateY(-15px) rotateZ(2deg)}}
+@keyframes pulse{0%,100%{opacity:.35}50%{opacity:1}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}}
+@media(max-width:1000px){
+ .navlinks{gap:13px;font-size:11px}.nav-cta{display:none}
+ .service-grid{grid-template-columns:repeat(2,1fr)}
+ .industry-grid{grid-template-columns:repeat(3,1fr)}
+ .project-grid{grid-template-columns:repeat(2,1fr)}
+ .hero-orbit{right:-4%;opacity:.7}
+ .remote-grid,.contact-grid{gap:35px}
+}
+@media(max-width:720px){
+ .container{width:calc(100% - 30px)}
+ .topline .container{justify-content:center;text-align:center;font-size:10px}
+ .topline .social-top{display:none}
+ .navbar{min-height:72px;flex-wrap:wrap}
+ .logo-mark{width:40px;height:38px;font-size:23px}
+ .logo-name{font-size:16px}
+ .menu-btn{display:block}
+ .navlinks{display:none;order:3;width:100%;flex-direction:column;align-items:stretch;gap:0;padding:0 0 15px}
+ .navlinks.open{display:flex}
+ .navlinks a{padding:12px 4px;border-top:1px solid var(--line);font-size:13px}
+ .hero{min-height:690px}
+ .hero-photo{inset:0;background-position:60% center}
+ .hero:before{background:linear-gradient(90deg,rgba(7,21,37,.97),rgba(7,21,37,.82))}
+ .hero-content{padding-top:65px;padding-bottom:85px}
+ .hero h1{font-size:clamp(44px,12vw,66px);letter-spacing:-2.5px}
+ .hero-lead{font-size:15px}
+ .hero-orbit{width:260px;right:-100px;top:14%;opacity:.32}
+ .camera-body{transform:scale(.72)}
+ .hero-tag{right:20px;bottom:25px}
+ .hero-facts{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+ .hero-actions{flex-direction:column;align-items:stretch}
+ .trust-grid{grid-template-columns:1fr 1fr;gap:12px}
+ .trust-item{justify-content:flex-start;border:0;padding:5px}
+ .section-heading{display:block}
+ .section-heading>p{margin-top:15px}
+ .services,.industries,.projects,.about,.contact{padding:60px 0}
+ .service-grid{grid-template-columns:1fr}
+ .service-img{height:205px}
+ .service-body p{min-height:0}
+ .remote-grid,.about-grid,.contact-grid{grid-template-columns:1fr;gap:32px}
+ .remote{padding:60px 0}
+ .remote-visual{min-height:290px}
+ .industry-grid{grid-template-columns:repeat(2,1fr);gap:10px}
+ .industry-card{height:190px}
+ .industry-card:last-child{grid-column:1/-1;height:160px}
+ .project-grid{grid-template-columns:repeat(2,1fr);gap:10px}
+ .project-card{min-height:180px}
+ .warranty-inner{flex-wrap:wrap;align-items:flex-start}
+ .warranty-icon{width:48px;height:48px}
+ .warranty-inner>div:nth-child(2){flex:1}
+ .warranty h2{font-size:23px}
+ .warranty .btn{width:100%;margin:0}
+ .about-stat-row{grid-template-columns:1fr 1fr}
+ .quote-form{padding:22px}
+ .footer-main{align-items:flex-start;flex-direction:column}
+ .footer-bottom{flex-direction:column}
+ .float-wa{width:51px;height:51px;right:13px;bottom:13px}
+}
+</style>
+</head>
+
+<body>
+<div class="topline">
+  <div class="container">
+    <span>📍 Dakshina Kannada &nbsp; | &nbsp; Udupi &nbsp; | &nbsp; Across Karnataka</span>
+    <span class="social-top"><a href="mailto:szenterprises916@gmail.com">✉ szenterprises916@gmail.com</a> &nbsp; · &nbsp; <a href="https://www.instagram.com/sz_enterprises_01/" target="_blank" rel="noopener">Instagram @sz_enterprises_01</a></span>
+  </div>
+</div>
+
+<header>
+  <div class="container navbar">
+    <a href="#home" class="logo" aria-label="SZ Enterprises homepage">
+      <div class="logo-mark"><span>SZ</span></div>
+      <div class="logo-name">SZ ENTERPRISES<small>YOUR SAFETY, OUR PRIORITY</small></div>
+    </a>
+    <button class="menu-btn" id="menuBtn" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="navlinks" id="navLinks" aria-label="Main navigation">
+      <a href="#home">Home</a><a href="#services">Services</a><a href="#projects">Our Work</a><a href="#products">Solutions</a><a href="#about">About</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="btn btn-gold nav-cta" href="https://wa.me/919663193006?text=Hello%20SZ%20Enterprises%2C%20I%20would%20like%20to%20enquire%20about%20CCTV%20solutions." target="_blank" rel="noopener">◉ WhatsApp Us ↗</a>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="hero-photo"></div>
+  <div class="hero-orbit" aria-hidden="true">
+    <div class="orbit-ring"></div><div class="orbit-ring"></div><div class="orbit-ring"></div><div class="orbit-dot"></div>
+    <div class="camera-3d"><div class="camera-body"><div class="camera-base"></div><div class="camera-light"></div></div></div>
+  </div>
+  <div class="container hero-content">
+    <p class="eyebrow">Professional CCTV & Smart Security</p>
+    <h1>YOUR SAFETY.<span>OUR PRIORITY.</span></h1>
+    <p class="hero-lead">Smarter surveillance. Professional installation. Greater peace of mind. Explore CCTV solutions for homes, shops, offices, warehouses and commercial properties.</p>
+    <div class="hero-actions">
+      <a class="btn btn-gold" href="https://wa.me/919663193006?text=Hello%20SZ%20Enterprises%2C%20I%20would%20like%20a%20CCTV%20quotation." target="_blank" rel="noopener">GET A FREE QUOTE ON WHATSAPP ↗</a>
+      <a class="btn btn-dark" href="tel:+919663193006">☎ &nbsp; CALL +91 96631 93006</a>
+    </div>
+    <div class="hero-facts">
+      <div class="hero-fact"><span class="fact-icon">◉</span><span>Camera installation<br>for different spaces</span></div>
+      <div class="hero-fact"><span class="fact-icon">⚙</span><span>Setup & system<br>configuration</span></div>
+      <div class="hero-fact"><span class="fact-icon">▣</span><span>Recording & remote<br>viewing options</span></div>
+      <div class="hero-fact"><span class="fact-icon">✓</span><span>Maintenance &<br>support enquiries</span></div>
+    </div>
+  </div>
+  <div class="hero-tag">SECURE TODAY<span>SAFE TOMORROW</span></div>
+  <div class="hero-bottom"></div>
+</section>
+
+<section class="trustbar">
+  <div class="container trust-grid">
+    <div class="trust-item"><div class="trust-icon">◉</div><div><b>CCTV Solutions</b><small>Indoor & outdoor cameras</small></div></div>
+    <div class="trust-item"><div class="trust-icon">▣</div><div><b>DVR / NVR Setup</b><small>Recording configuration</small></div></div>
+    <div class="trust-item"><div class="trust-icon">▯</div><div><b>Remote Viewing</b><small>Compatible mobile access</small></div></div>
+    <div class="trust-item"><div class="trust-icon">✓</div><div><b>One-Year Warranty*</b><small>Subject to product terms</small></div></div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-heading reveal">
+      <div><p class="eyebrow">What we do</p><h2>Security built around <span class="gold">your needs.</span></h2></div>
+      <p>From choosing the right cameras to system setup, explore the security services you can enquire about with SZ Enterprises.</p>
+    </div>
+    <div class="service-grid">
+      <article class="service-card reveal">
+        <div class="service-img"><img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=900&q=85" alt="CCTV security camera installed on a building" loading="lazy"><span class="service-number">01 / INSTALL</span></div>
+        <div class="service-body"><h3>CCTV Camera Installation</h3><p>Indoor and outdoor surveillance camera solutions for homes, retail spaces and commercial properties.</p><a href="#contact" data-service="CCTV camera installation">ENQUIRE ABOUT INSTALLATION ↗</a></div>
+      </article>
+      <article class="service-card reveal">
+        <div class="service-img"><img src="https://images.unsplash.com/photo-1558008258-3256797b43f3?auto=format&fit=crop&w=900&q=85" alt="Electronic security equipment" loading="lazy"><span class="service-number">02 / RECORD</span></div>
+        <div class="service-body"><h3>DVR / NVR Setup</h3><p>Recording equipment configuration and compatible surveillance system setup for your property.</p><a href="#contact" data-service="DVR / NVR setup">EXPLORE RECORDING SYSTEMS ↗</a></div>
+      </article>
+      <article class="service-card reveal">
+        <div class="service-img"><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=85" alt="Electronic components and accessories" loading="lazy"><span class="service-number">03 / EQUIP</span></div>
+        <div class="service-body"><h3>Products & Accessories</h3><p>Enquire about compatible cameras, cables, storage, recording equipment and other accessories.</p><a href="#contact" data-service="CCTV products and accessories">ASK ABOUT PRODUCTS ↗</a></div>
+      </article>
+      <article class="service-card reveal">
+        <div class="service-img"><img src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=900&q=85" alt="Technician working with technical equipment" loading="lazy"><span class="service-number">04 / SUPPORT</span></div>
+        <div class="service-body"><h3>Maintenance & Support</h3><p>Contact the team for troubleshooting, maintenance and assistance based on service availability.</p><a href="#contact" data-service="CCTV maintenance and support">REQUEST SUPPORT ↗</a></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="brands" id="products">
+  <div class="container">
+    <p class="brand-heading">Security brands to enquire about</p>
+    <div class="brand-row">
+      <span class="brand-pill">HIKVISION</span><span class="brand-pill cp">CP PLUS</span><span class="brand-pill">Dahua</span><span class="brand-pill">EZVIZ</span><span class="brand-pill">TP-Link</span>
+    </div>
+    <p class="brand-note">Product and brand availability must be confirmed before purchase.</p>
+  </div>
+</section>
+
+<section class="remote">
+  <div class="container remote-grid">
+    <div class="remote-visual reveal">
+      <img src="https://images.unsplash.com/photo-1558008258-3256797b43f3?auto=format&fit=crop&w=1000&q=85" alt="Security equipment" loading="lazy">
+      <div class="monitor-overlay">
+        <div style="background-image:url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=500&q=75')"></div>
+        <div style="background-image:url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=500&q=75')"></div>
+        <div style="background-image:url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=500&q=75')"></div>
+        <div style="background-image:url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=500&q=75')"></div>
+      </div>
+      <span class="monitor-label">SMART SURVEILLANCE</span>
+    </div>
+    <div class="remote-copy reveal">
+      <p class="eyebrow">Connected security</p>
+      <h2>Keep an eye on what <span class="gold">matters most.</span></h2>
+      <p>Ask about compatible CCTV systems that support remote viewing. Availability depends on the camera, recorder, internet connection and configuration.</p>
+      <ul class="checks"><li>Indoor and outdoor camera options</li><li>DVR / NVR recording solutions</li><li>Mobile viewing setup for compatible systems</li><li>Installation and accessories enquiries</li></ul>
+      <a class="btn btn-gold" href="https://wa.me/919663193006?text=Hello%20SZ%20Enterprises%2C%20please%20recommend%20a%20CCTV%20system%20for%20my%20property." target="_blank" rel="noopener">FIND THE RIGHT SYSTEM ↗</a>
+    </div>
+  </div>
+</section>
+
+<section class="industries" id="industries">
+  <div class="container">
+    <div class="section-heading reveal">
+      <div><p class="eyebrow">Where we help</p><h2>Solutions for every <span class="gold">space.</span></h2></div>
+      <p>Every property has different security needs. Tell us about your location and we'll help you enquire about a suitable setup.</p>
+    </div>
+    <div class="industry-grid">
+      <a class="industry-card reveal" href="#contact" data-service="Home CCTV security"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=700&q=80" alt="Residential home" loading="lazy"><span>Residential Homes<b>EXPLORE SOLUTIONS ↗</b></span></a>
+      <a class="industry-card reveal" href="#contact" data-service="Shop and showroom CCTV"><img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=700&q=80" alt="Retail shop" loading="lazy"><span>Shops & Showrooms<b>EXPLORE SOLUTIONS ↗</b></span></a>
+      <a class="industry-card reveal" href="#contact" data-service="Office CCTV security"><img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=700&q=80" alt="Office" loading="lazy"><span>Offices<b>EXPLORE SOLUTIONS ↗</b></span></a>
+      <a class="industry-card reveal" href="#contact" data-service="Warehouse CCTV security"><img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=700&q=80" alt="Warehouse" loading="lazy"><span>Warehouses<b>EXPLORE SOLUTIONS ↗</b></span></a>
+      <a class="industry-card reveal" href="#contact" data-service="Factory and industrial CCTV"><img src="https://images.unsplash.com/photo-1567789884554-0b844b597180?auto=format&fit=crop&w=700&q=80" alt="Industrial facility" loading="lazy"><span>Factories & Industry<b>EXPLORE SOLUTIONS ↗</b></span></a>
+    </div>
+  </div>
+</section>
+
+<section class="projects" id="projects">
+  <div class="container">
+    <div class="section-heading reveal">
+      <div><p class="eyebrow">Genuine installation photos</p><h2>Our work in <span class="gold">action.</span></h2></div>
+      <p>Explore actual installation photos supplied by SZ Enterprises. These are intended to showcase the company's work, not stock photography.</p>
+    </div>
+    <div class="project-grid">
+      <button class="project-card reveal" type="button" data-photo="assets/installation-a-01.jpg"><img src="assets/installation-a-01.jpg" alt="Retail shop CCTV monitoring screen" loading="lazy"><span><small>PROJECT PHOTO</small>Retail monitoring setup ↗</span></button>
+      <button class="project-card reveal" type="button" data-photo="assets/installation-a-02.jpg"><img src="assets/installation-a-02.jpg" alt="Outdoor CCTV camera under roof" loading="lazy"><span><small>PROJECT PHOTO</small>Outdoor camera installation ↗</span></button>
+      <button class="project-card reveal" type="button" data-photo="assets/installation-a-03.jpg"><img src="assets/installation-a-03.jpg" alt="Camera installed at building entrance" loading="lazy"><span><small>PROJECT PHOTO</small>Entrance surveillance ↗</span></button>
+      <button class="project-card reveal" type="button" data-photo="assets/installation-a-04.jpg"><img src="assets/installation-a-04.jpg" alt="Indoor shop camera near shelves" loading="lazy"><span><small>PROJECT PHOTO</small>Indoor shop security ↗</span></button>
+      <button class="project-card reveal" type="button" data-photo="assets/installation-a-05.jpg"><img src="assets/installation-a-05.jpg" alt="CCTV camera installed indoors" loading="lazy"><span><small>PROJECT PHOTO</small>Indoor camera placement ↗</span></button>
+      <button class="project-card reveal" type="button" data-photo="assets/installation-b-02.jpg"><img src="assets/installation-b-02.jpg" alt="Camera installation under commercial roof" loading="lazy"><span><small>PROJECT PHOTO</small>Commercial premises ↗</span></button>
+      <button class="project-card reveal" type="button" data-photo="assets/installation-b-03.jpg"><img src="assets/installation-b-03.jpg" alt="CCTV camera mounted beneath roof panels" loading="lazy"><span><small>PROJECT PHOTO</small>Ceiling-mounted camera ↗</span></button>
+      <button class="project-card reveal" type="button" data-photo="assets/installation-b-01.jpg"><img src="assets/installation-b-01.jpg" alt="CCTV monitor with multiple views" loading="lazy"><span><small>PROJECT PHOTO</small>Multi-camera monitoring ↗</span></button>
+    </div>
+    <p class="gallery-disclaimer">Images supplied by the client. Confirm permission to publish before launch and ensure no private surveillance footage or identifiable people are exposed. If an image does not load, check that its file exists in the repository's assets folder with the exact filename shown.</p>
+  </div>
+</section>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Installation photo preview">
+  <button type="button" id="lightboxClose" aria-label="Close photo">×</button>
+  <img id="lightboxImage" src="" alt="Enlarged installation photo">
+</div>
+
+<section class="warranty">
+  <div class="container warranty-inner">
+    <div class="warranty-icon">✓</div>
+    <div><h2>One-year warranty*</h2><p>Warranty coverage, exclusions and claim procedures depend on the product and the written terms provided at purchase.</p></div>
+    <a class="btn btn-light" href="#contact">ASK ABOUT WARRANTY ↗</a>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="container about-grid">
+    <div class="reveal"><p class="eyebrow">About SZ Enterprises</p><h2>Security solutions with a <span class="gold">personal touch.</span></h2>
+      <div class="about-stat-row">
+        <div class="about-stat"><b>Residential</b><small>Home security enquiries</small></div>
+        <div class="about-stat"><b>Commercial</b><small>Business premises</small></div>
+        <div class="about-stat"><b>Karnataka</b><small>Service enquiries statewide</small></div>
+      </div>
+    </div>
+    <div class="reveal"><p>SZ Enterprises helps customers explore CCTV cameras, surveillance systems, recording equipment and related installation services for residential and commercial spaces.</p><p>We aim to make it easier for customers to enquire about suitable products, installation, configuration and support for their property.</p><p>Our stated service coverage includes Dakshina Kannada, Udupi and locations across Karnataka, subject to project requirements and availability.</p><a class="btn btn-gold" href="#contact">TALK TO OUR TEAM ↗</a></div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container contact-grid">
+    <div class="contact-copy reveal">
+      <p class="eyebrow">Let's secure your space</p>
+      <h2>Ready for a safer <span class="gold">tomorrow?</span></h2>
+      <p>Tell us what you need. Complete the enquiry form and continue to WhatsApp with a message prepared for SZ Enterprises.</p>
+      <div class="contact-info">
+        <a href="tel:+919663193006"><i>☎</i><span><small>CALL US</small>+91 96631 93006</span></a>
+        <a href="mailto:szenterprises916@gmail.com"><i>✉</i><span><small>EMAIL US</small>szenterprises916@gmail.com</span></a>
+        <a href="https://www.instagram.com/sz_enterprises_01/" target="_blank" rel="noopener"><i>◎</i><span><small>FOLLOW US</small>@sz_enterprises_01</span></a>
+        <div><i>⌖</i><span><small>SERVICE COVERAGE</small>Dakshina Kannada · Udupi · Karnataka</span></div>
+      </div>
+    </div>
+    <form class="quote-form reveal" id="quoteForm">
+      <h3>Request a quotation</h3><p>Share your requirements to get started.</p>
+      <label for="name">Your name *</label><input id="name" name="name" required autocomplete="name" placeholder="Enter your name">
+      <label for="phone">Contact number *</label><input id="phone" name="phone" required autocomplete="tel" inputmode="tel" pattern="[0-9+ ()-]{8,18}" placeholder="Your phone number">
+      <label for="property">Property type *</label>
+      <select id="property" name="property" required><option value="">Select property type</option><option>Home / Apartment</option><option>Shop / Showroom</option><option>Office</option><option>Warehouse</option><option>Factory / Industry</option><option>Other</option></select>
+      <label for="service">Service required *</label>
+      <select id="service" name="service" required><option value="">Choose a service</option><option>CCTV camera installation</option><option>DVR / NVR setup</option><option>Products and accessories</option><option>Mobile remote viewing</option><option>Maintenance and support</option><option>Other / Need advice</option></select>
+      <label for="location">Location</label><input id="location" name="location" placeholder="Town / district">
+      <label for="message">Additional details</label><textarea id="message" name="message" rows="3" placeholder="Camera quantity, property size or questions"></textarea>
+      <button class="btn btn-gold" type="submit">CONTINUE TO WHATSAPP ↗</button>
+      <small class="form-note">Your browser prepares a WhatsApp message. The message is not sent until you review and send it in WhatsApp.</small>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-main">
+      <a href="#home" class="logo"><div class="logo-mark"><span>SZ</span></div><div class="logo-name">SZ ENTERPRISES<small>YOUR SAFETY, OUR PRIORITY</small></div></a>
+      <p>CCTV & Smart Security Solutions<br>Dakshina Kannada · Udupi · Karnataka</p>
+      <div class="footer-links"><a href="#services">Services</a><a href="#projects">Our Work</a><a href="#about">About</a><a href="#contact">Contact</a><a href="mailto:szenterprises916@gmail.com">Email</a></div>
+    </div>
+    <div class="footer-bottom"><span>© <span id="year"></span> SZ Enterprises. All rights reserved.</span><span>Built for a safer tomorrow.</span></div>
+    <p class="footer-disclaimer">Website imagery includes temporary stock visuals and client-supplied installation photos. Confirm all service claims, supported brands, warranty terms and image permissions before public launch.</p>
+  </div>
+</footer>
+
+<a class="float-wa" href="https://wa.me/919663193006?text=Hello%20SZ%20Enterprises%2C%20I%20have%20a%20CCTV%20enquiry." target="_blank" rel="noopener" aria-label="Chat with SZ Enterprises on WhatsApp">◉</a>
+
+<script>
+const menuBtn=document.getElementById("menuBtn");
+const navLinks=document.getElementById("navLinks");
+menuBtn.addEventListener("click",()=>{
+  const open=navLinks.classList.toggle("open");
+  menuBtn.setAttribute("aria-expanded",String(open));
+  menuBtn.textContent=open?"×":"☰";
+});
+navLinks.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{
+  navLinks.classList.remove("open");
+  menuBtn.setAttribute("aria-expanded","false");
+  menuBtn.textContent="☰";
+}));
+document.getElementById("year").textContent=new Date().getFullYear();
+
+/* Reveal elements when they enter the viewport */
+const revealObserver=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add("visible");
+      revealObserver.unobserve(entry.target);
+    }
+  });
+},{threshold:.12});
+document.querySelectorAll(".reveal").forEach(el=>revealObserver.observe(el));
+
+/* Service and industry links preselect the enquiry form */
+document.querySelectorAll("[data-service]").forEach(link=>{
+  link.addEventListener("click",()=>{
+    const select=document.getElementById("service");
+    const wanted=link.dataset.service.toLowerCase();
+    const option=[...select.options].find(o=>o.text.toLowerCase()===wanted);
+    if(option)select.value=option.value;
+    else if(wanted.includes("home")||wanted.includes("shop")||wanted.includes("office")||wanted.includes("warehouse")||wanted.includes("factory")){
+      select.value="CCTV camera installation";
+    }
+  });
+});
+
+/* WhatsApp quotation form */
+document.getElementById("quoteForm").addEventListener("submit",event=>{
+  event.preventDefault();
+  const form=event.currentTarget;
+  if(!form.reportValidity())return;
+  const data=new FormData(form);
+  const phone=String(data.get("phone")||"").trim();
+  if(!/^[0-9+ ()-]{8,18}$/.test(phone)){
+    alert("Please enter a valid contact number.");
+    return;
+  }
+  const message=[
+    "Hello SZ Enterprises, I would like to request a CCTV/security quotation.",
+    "",
+    "Name: "+data.get("name"),
+    "Contact number: "+data.get("phone"),
+    "Property type: "+data.get("property"),
+    "Service required: "+data.get("service"),
+    "Location: "+(data.get("location")||"Not provided"),
+    "Additional details: "+(data.get("message")||"None")
+  ].join("\n");
+  window.open("https://wa.me/919663193006?text="+encodeURIComponent(message),"_blank","noopener,noreferrer");
+});
+
+/* Genuine installation photo lightbox */
+const lightbox=document.getElementById("lightbox");
+const lightboxImage=document.getElementById("lightboxImage");
+function closeLightbox(){lightbox.classList.remove("open");lightboxImage.src="";document.body.style.overflow=""}
+document.querySelectorAll("[data-photo]").forEach(button=>{
+  button.addEventListener("click",()=>{
+    lightboxImage.src=button.dataset.photo;
+    lightbox.classList.add("open");
+    document.body.style.overflow="hidden";
+  });
+});
+document.getElementById("lightboxClose").addEventListener("click",closeLightbox);
+lightbox.addEventListener("click",e=>{if(e.target===lightbox)closeLightbox()});
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeLightbox()});
+</script>
+</body>
+</html>
